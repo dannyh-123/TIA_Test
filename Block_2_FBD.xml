@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2022-10-18T12:02:26.1278761Z</Created>
+    <Created>2022-10-18T12:10:04.6012289Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -91,7 +91,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="Clock_0.5Hz" />
+        <Component Name="Clock_2.5Hz" />
       </Symbol>
     </Access>
     <Part Name="F_TRIG" Version="1.0" UId="23">
