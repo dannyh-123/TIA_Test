@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2022-10-18T11:27:33.7700499Z</Created>
+    <Created>2022-10-18T12:02:26.1278761Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -86,26 +86,31 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="Clock_0.5Hz" />
+        <Component Name="AlwaysTRUE" />
       </Symbol>
     </Access>
-    <Part Name="F_TRIG" Version="1.0" UId="22">
-      <Instance Scope="LocalVariable" UId="23">
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Clock_2.5Hz" />
+      </Symbol>
+    </Access>
+    <Part Name="F_TRIG" Version="1.0" UId="23">
+      <Instance Scope="LocalVariable" UId="24">
         <Component Name="Trigger" />
       </Instance>
     </Part>
   </Parts>
   <Wires>
     <Wire UId="26">
-      <OpenCon UId="24" />
-      <NameCon UId="22" Name="en" />
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="en" />
     </Wire>
     <Wire UId="27">
-      <IdentCon UId="21" />
-      <NameCon UId="22" Name="CLK" />
+      <IdentCon UId="22" />
+      <NameCon UId="23" Name="CLK" />
     </Wire>
     <Wire UId="28">
-      <NameCon UId="22" Name="Q" />
+      <NameCon UId="23" Name="Q" />
       <OpenCon UId="25" />
     </Wire>
   </Wires>
