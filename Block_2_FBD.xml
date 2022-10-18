@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2022-10-18T11:27:33.7700499Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Test Suite Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="nCounter2" Datatype="Int" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Trigger" Datatype="F_TRIG" Version="1.0" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="CLK" Datatype="Bool" /></Section><Section Name="Output"><Member Name="Q" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Stat_Bit" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="IEC_Counter_0_Instance" Datatype="CTU_INT" Version="1.0" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="CU" Datatype="Bool" /><Member Name="CD" Datatype="Bool" /><Member Name="R" Datatype="Bool" /><Member Name="LD" Datatype="Bool" /><Member Name="QU" Datatype="Bool" /><Member Name="QD" Datatype="Bool" /><Member Name="PV" Datatype="Int" /><Member Name="CV" Datatype="Int" /></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant">
+    <Member Name="CounterReset" Datatype="Int" Accessibility="Public">
+      <StartValue>50</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Block_2_FBD</Name>
+      <Number>2</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="Clock_0.5Hz" />
+      </Symbol>
+    </Access>
+    <Part Name="F_TRIG" Version="1.0" UId="22">
+      <Instance Scope="LocalVariable" UId="23">
+        <Component Name="Trigger" />
+      </Instance>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="26">
+      <OpenCon UId="24" />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="22" Name="CLK" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="22" Name="Q" />
+      <OpenCon UId="25" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Trigger" />
+        <Component Name="Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="nCounter2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalConstant" UId="23">
+      <Constant Name="CounterReset" />
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="nCounter2" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="25">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="CTU" Version="1.0" UId="26">
+      <Instance Scope="LocalVariable" UId="27">
+        <Component Name="IEC_Counter_0_Instance" />
+      </Instance>
+      <TemplateValue Name="value_type" Type="Type">Int</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="29">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="in1" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="25" Name="in2" />
+    </Wire>
+    <Wire UId="31">
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="R" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="CU" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="PV" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="26" Name="CV" />
+      <OpenCon UId="28" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="12" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="13" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

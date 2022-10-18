@@ -1,0 +1,23 @@
+﻿FUNCTION_BLOCK "Block_1_SCL"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR 
+      nCounter1 : Int;
+      Trigger {InstructionName := 'R_TRIG'; LibVersion := '1.0'; S7_SetPoint := 'False'} : R_TRIG;
+   END_VAR
+
+   VAR CONSTANT 
+      CounterReset : Int := 60;
+   END_VAR
+
+
+BEGIN
+	#Trigger(CLK := "Clock_0.625Hz");
+	IF #Trigger.Q = TRUE THEN
+	    IF #nCounter1 >= #CounterReset THEN
+	        #nCounter1 := 0;
+	    END_IF;
+	    #nCounter1 := #nCounter1 + 1;
+	END_IF;
+END_FUNCTION_BLOCK
+
