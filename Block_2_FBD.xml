@@ -91,7 +91,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="Clock_2.5Hz" />
+        <Component Name="Clock_0.5Hz" />
       </Symbol>
     </Access>
     <Part Name="F_TRIG" Version="1.0" UId="23">
