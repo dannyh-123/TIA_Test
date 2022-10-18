@@ -1,7 +1,10 @@
 ﻿FUNCTION "AnalogOutput" : Void
 { S7_Optimized_Access := 'TRUE' }
 VERSION : 0.1
-
+   VAR 
+      nCounter1 : Int;
+      Trigger {InstructionName := 'R_TRIG'; LibVersion := '1.0'; S7_SetPoint := 'False'} : R_TRIG;
+   END_VAR
 BEGIN
 END_FUNCTION
 
